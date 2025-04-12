@@ -18,7 +18,7 @@ It integrates **MongoDB Atlas** and **Cloudinary** for data and media storage, a
 
 1️⃣ Clone the repository using Git  
 ```bash
-git clone https://github.com/yourusername/WanderLust.git
+git clone https://github.com/Komala8/WanderLust
 ```
 
 2️⃣ Install dependencies  
@@ -82,4 +82,4 @@ npm start
 
 ## 🌐 Live Demo
 
-🚀 [View WanderLust Live](wanderlust-qhch.onrender.com/listings)
+🚀 [View WanderLust Live](wanderlust-qhch.onrender.com)
