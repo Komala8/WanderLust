@@ -87,12 +87,18 @@ app.use((req,res,next)=>{
     next();
 });
 
-app.use("/listings",listingRouter);
-app.use("/listings/:id/reviews",reviewRouter);
-app.use("/",userRouter);
+app.use("/listings", listingRouter);
+app.use("/listings/:id/reviews", reviewRouter);
+app.use("/", userRouter);
 
-app.all("*",(req,res,next)=>{
-    next(new expressError(404,"Page not found!"));
+// New redirect for root path
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
+// Catch-all for non-existent routes
+app.all("*", (req, res, next) => {
+  next(new expressError(404, "Page not found!"));
 });
 
 app.use((err,req,res,next)=>{
